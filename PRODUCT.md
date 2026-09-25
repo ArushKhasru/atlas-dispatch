@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-Delegated by user: React, TypeScript and Vite. Browser-local persistence; no server, credentials, or paid services.
+Delegated by user: React, TypeScript, Vite and Tailwind CSS. Browser-local persistence; no server, credentials, or paid services.
 
 ## Users
 
@@ -37,6 +37,10 @@ Eight fictional requests R101–R108 supplied in the assessment. No commercial o
 - Preserve linked messages and record changes.
 - A coordinator must be able to demonstrate the workflow in under three minutes.
 
-## Open decisions
+## Brand Commitments
 
-User approved a clean, practical dispatch desk with a prioritized request list beside the selected job and always-visible technician availability. Hosting discovery remains open. No paid services authorized.
+User approved a clean, practical dispatch desk and subsequently requested a professional dark interface with properly aligned cards. Three equal technician cards sit above equal-height queue and detail panels on desktop; mobile uses a natural single-pane flow. Prioritized work, evidence and clear next actions remain the focus.
+
+## Delivery
+
+Public source is hosted at github.com/ArushKhasru/atlas-dispatch, with the app and captioned demo on GitHub Pages. No paid services are authorized.

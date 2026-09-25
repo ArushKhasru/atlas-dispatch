@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import {
   ArrowDownToLine,
   ArrowLeft,
@@ -88,6 +88,11 @@ export default function App() {
   const [notice, setNotice] = useState('');
   const [mobileDetail, setMobileDetail] = useState(false);
   const resetDialog = useRef<HTMLDialogElement>(null);
+  const detailPanel = useRef<HTMLElement>(null);
+  // A new request should open at its evidence, not inherit the previous job's scroll.
+  useEffect(() => {
+    detailPanel.current?.scrollTo({ top: 0 });
+  }, [selected]);
   const current = state.requests.find((r) => r.id === selected)!;
   const open = state.requests.filter(actionable);
   const overdue = state.requests.filter(ownershipOverdue).length;
@@ -344,7 +349,7 @@ export default function App() {
               Suggestions support the coordinator. People confirm the decisions.
             </p>
           </section>
-          <section className="detail" aria-label="Selected request">
+          <section className="detail" aria-label="Selected request" ref={detailPanel}>
             <button className="mobile-back text-button" onClick={() => setMobileDetail(false)}>
               <ArrowLeft size={16} />
               Back to queue
