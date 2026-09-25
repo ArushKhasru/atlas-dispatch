@@ -1,0 +1,12 @@
+import { chromium } from '@playwright/test';
+import { mkdir } from 'node:fs/promises';
+await mkdir('.impeccable/review', { recursive: true });
+const browser = await chromium.launch();
+const page = await browser.newPage({ viewport: { width: 1440, height: 1100 }, deviceScaleFactor: 1 });
+await page.goto(process.env.DEMO_URL || 'http://127.0.0.1:5173');
+await page.screenshot({ path: '.impeccable/review/desktop.png', fullPage: true });
+await page.setViewportSize({ width: 390, height: 844 });
+await page.screenshot({ path: '.impeccable/review/mobile.png', fullPage: true });
+await page.getByRole('button', { name: 'Open R101:', exact: false }).click();
+await page.screenshot({ path: '.impeccable/review/mobile-detail.png', fullPage: true });
+await browser.close();

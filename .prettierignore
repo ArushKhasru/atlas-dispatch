@@ -1,0 +1,9 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+artifacts/
+.impeccable/
+package-lock.json
+*.tsbuildinfo
+scripts/capture-review.mjs
