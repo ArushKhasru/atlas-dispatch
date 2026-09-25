@@ -1,6 +1,6 @@
 # D3. Demo recording guide
 
-A ready-to-use captioned recording is hosted on the [demo page](https://arushkhasru.github.io/atlas-dispatch/demo.html). It has no audio. The script below is an alternative if you want to record your own narration.
+A ready-to-use captioned recording with visible mouse movement and click highlights is hosted on the [demo page](https://arushkhasru.github.io/atlas-dispatch/demo.html). It has no audio. The script below is an alternative if you want to record your own narration.
 
 Target length: **2 minutes 45 seconds**, leaving 15 seconds below the assessment limit. Record the actual browser workflow, not slides. Use the live app or a local production preview. Reset the demo before starting; keep the technician strip visible.
 
